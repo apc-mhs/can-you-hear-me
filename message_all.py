@@ -10,7 +10,7 @@ BODY = 'body'
 # Load staff names from file
 with open('staff.yml') as file:
     # STAFF is a list of lists containing first and last names. Decoding as tuples might require extra effort
-    # E.x. [['Matthew', 'Hills']]
+    # E.x. [['First', 'Last']]
     STAFF = yaml.load(file, Loader=yaml.FullLoader)
 
 # Load schoology api keys from file
