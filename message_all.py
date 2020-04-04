@@ -1,6 +1,5 @@
 import schoolopy
 import yaml
-import functools
 import time
 
 BLOCKED = []
