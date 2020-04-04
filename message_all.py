@@ -76,7 +76,7 @@ if False:
         print(f'{num + 1} - Sending to: {user_id} ({name}) ...', end='')
         schoology_req('https://api.schoology.com/v1/messages', data={
             'subject': SUBJECT,
-            'message': BODY.format(name),
+            'message': BODY,
             'recipient_ids': str(user_id)
         })
         print('Success')
