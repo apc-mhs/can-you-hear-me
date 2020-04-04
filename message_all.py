@@ -5,18 +5,8 @@ import time
 
 BLOCKED = []
 
-SUBJECT = 'An invitation to join the GMHS Advanced Programming Club!'
-BODY = """Hi {}! We’re hoping you’re interested in joining our newly formed club — the Advanced Programming Club or APC. Contrary to what the name may make you think, you don’t need to have any prior experience and we’d love to have you onboard. If you’re interested in joining, please input the following access code into the ‘join groups’ tab on Schoology.
-
-Group Access Code: HJ2S-P67Z-JSWHT
-
-Please reply if you have any questions!
-
-Thanks,
-Andrew Lester, Jonathan Oppenheimer, and Rohan Suri.
-
-(This notice was sent automatically and is not (to the best of our knowledge) in violation of Schoology’s Terms of Use, Virginia State Law or the George Mason High School Acceptable Use Policies. Any complaints should be forwarded by email to apc.gmhs@gmail.com)
-"""
+SUBJECT = 'subject'
+BODY = 'body'
 
 # Load staff names from file
 with open('staff.yml') as file:
