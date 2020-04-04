@@ -9,4 +9,6 @@ Send a private message to all schoology user accounts in a specific building.
 
 The A.P.C. is **NOT** liable for any issues or consequences that result from usage of this code.
 
+You **SHOULD** apply filtering to the list of users to suit a specific purpose.
+
 These are just guidelines. The LICENSE file outlines specific usage information.
