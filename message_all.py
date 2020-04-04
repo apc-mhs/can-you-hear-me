@@ -20,8 +20,8 @@ Andrew Lester, Jonathan Oppenheimer, and Rohan Suri.
 
 # Load staff names from file
 with open('staff.yml') as file:
-    # STA is a list of tuples containing first and last names
-    # E.x. [('Matthew', 'Hills')]
+    # STAFF is a list of lists containing first and last names. Decoding as tuples might require extra effort
+    # E.x. [['Matthew', 'Hills']]
     STAFF = yaml.load(file, Loader=yaml.FullLoader)
 
 # Load schoology api keys from file
@@ -68,7 +68,7 @@ def get_paged_data(
 user_ids = []
 users = get_paged_data(schoology_req, 'https://api.schoology.com/v1/users?building_id=10704963&limit=200', 'user')
 for user in users:
-    if (user['name_first'], user['name_last']) not in STAFF:
+    if [user['name_first'], user['name_last']] not in STAFF:
         user_ids.append((user['uid'], user['name_first'], user['name_last']))
 
 # Add all people that have already received messages to a "BLOCKED" list
@@ -78,13 +78,13 @@ for message in sent:
 
 # Change to True to actually send the messages
 if False:
-    num = 1
+    num = 0
     for user_id, name, last in user_ids:
         if str(user_id) in BLOCKED:
             print('SKIPPING: ' + str(user_id) + ' | ' + name)
             continue
 
-        print(f'{num} - Sending to: {user_id} ({name}) ...', end='')
+        print(f'{num + 1} - Sending to: {user_id} ({name}) ...', end='')
         schoology_req('https://api.schoology.com/v1/messages', data={
             'subject': SUBJECT,
             'message': BODY.format(name),
@@ -94,4 +94,4 @@ if False:
 
         time.sleep(1)
         num += 1
-print('Total messages sent: ' + str(len(user_ids)))
+    print('Total messages sent: ' + str(num))
