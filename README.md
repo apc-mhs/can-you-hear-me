@@ -5,7 +5,7 @@ DO NOT use this code without elevated privileges or the express consent of an ad
 
 DO NOT use this code to spam, harrass, or harm any person(s).
 
-DO NOT use this code without express consent from the user from which you received schoology API keys.
+DO NOT use this code without the express consent of the user from whom you received schoology API keys.
 
 The A.P.C. is NOT liable for any issues or consequences that result from usage of this code.
 
