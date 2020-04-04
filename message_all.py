@@ -63,7 +63,7 @@ for user in users:
 # Add all people that have already received messages to a "BLOCKED" list
 sent = get_paged_data(schoology_req, 'https://api.schoology.com/v1/messages/sent?limit=200', 'message')
 for message in sent:
-   BLOCKED.append(message['recipient_ids'])
+    BLOCKED.append(message['recipient_ids'])
 
 # Change to True to actually send the messages
 if False:
